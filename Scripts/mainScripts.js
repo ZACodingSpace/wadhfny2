@@ -67,6 +67,3 @@ function counter(element, increment) {
     updateCount();
 }
 // Statistics Section Scribts End
-
-
-
