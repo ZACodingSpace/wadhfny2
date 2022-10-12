@@ -1,6 +1,5 @@
 // The Entry Animation for Elements Start
 let sections_titles = document.querySelectorAll(".slide-up");
-let contents_elements = document.querySelectorAll(".slide-in");
 let appearing_way = {
     // threshhold: 1,
     rootMargin: "0px 0px -100px 0px"
@@ -20,9 +19,6 @@ let appear_on_scroll = new IntersectionObserver(function (elements, appear_on_sc
 sections_titles.forEach(title => {
     appear_on_scroll.observe(title);
 })
-contents_elements.forEach(content_el => {
-    appear_on_scroll.observe(content_el);
-})
 // The Entry Animation for Elements End
 
 
@@ -34,26 +30,28 @@ let companies_card = document.querySelector(".companies");
 let applies_card = document.querySelector(".applies");
 let opportunities_card = document.querySelector(".opportunities");
 
-window.onscroll = function () {
+jobs_card.addEventListener("mouseenter", () => {
+    counter(elements[0], 2);
+});
 
-    if (window.scrollY >= (jobs_card.offsetTop - 350)) {
-        counter(elements[0], 2);
-    }
-    if (window.scrollY >= (companies_card.offsetTop - 350)) {
-        counter(elements[1], 20);
 
-    }
-    if (window.scrollY >= (applies_card.offsetTop - 350)) {
-        counter(elements[2], 10);
+companies_card.addEventListener("mouseenter", () => {
+    counter(elements[1], 20);
+})
 
-    }
-    if (window.scrollY >= (opportunities_card.offsetTop - 350)) {
-        counter(elements[3], 1);
-    }
-};
+applies_card.addEventListener("mouseenter", () => {
+    counter(elements[2], 10);
+})
+
+opportunities_card.addEventListener("mouseenter", () => {
+    counter(elements[3], 1);
+})
+
+
 
 function counter(element, increment) {
 
+    element.innerText = 0;
     let updateCount = () => {
         let data_goal = +element.getAttribute('data-goal');
         let num = +element.innerText;
@@ -61,12 +59,14 @@ function counter(element, increment) {
         if (num < data_goal) {
             element.innerText = num + increment;
 
-            setTimeout(updateCount, 100);
+            setTimeout(updateCount, 50);
         } else {
             element.innerText = data_goal;
         }
     };
-
     updateCount();
 }
 // Statistics Section Scribts End
+
+
+
