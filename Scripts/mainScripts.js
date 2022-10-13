@@ -4,6 +4,7 @@ let navbar = document.querySelector(".navbar");
 let navbar_collapse = document.querySelector(".navbar-collapse");
 let companies_section = document.querySelector(".companies-section");
 let nav_links = document.querySelectorAll(".nav-link");
+let bars_icon = document.querySelector(".bars-icon");
 
 window.onscroll = function () {
 
@@ -20,7 +21,14 @@ window.onscroll = function () {
         })
     } else {
         navbar.style.background = "transparent";
-        navbar_collapse.style.background = "#000000";
+        navbar_collapse.style.background = "transparent";
+        if (navbar_collapse.classList.contains("show")) {
+            navbar_collapse.style.background = "#000000";
+        }else{
+            if (bars_icon.classList.contains("collapsed") && navbar_collapse.classList.contains("show")){
+                navbar_collapse.style.background = "transparent";
+            }
+        }
         nav_links.forEach(nav_link => {
             nav_link.addEventListener("mouseenter", () => {
                 nav_link.style.background = "#2f2f2f";

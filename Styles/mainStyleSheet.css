@@ -142,10 +142,15 @@ body {
 
 .navbar .container .navbar-collapse.show {
     display: block;
+    background-color: #000000;
 }
 
 .navbar .container .navbar-collapse.show .navbar-nav .nav-item .nav-link {
     cursor: pointer;
+}
+
+.navbar .container .navbar-collapse.show .navbar-nav .nav-item .nav-link:hover {
+    background-color: #2f2f2f;
 }
 
 .navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link {
