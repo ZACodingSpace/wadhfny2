@@ -1,3 +1,40 @@
+// Nav bar Scribts Start
+
+let navbar = document.querySelector(".navbar");
+let navbar_collapse = document.querySelector(".navbar-collapse");
+let companies_section = document.querySelector(".companies-section");
+let nav_links = document.querySelectorAll(".nav-link");
+
+window.onscroll = function () {
+
+    if (window.scrollY >= (companies_section.offsetTop)) {
+        navbar.style.background = "#FAFAFA";
+        navbar_collapse.style.background = "#FAFAFA";
+        nav_links.forEach(nav_link => {
+            nav_link.addEventListener("mouseenter", () => {
+                nav_link.style.background = "#E9EDF5";
+            });
+            nav_link.addEventListener("mouseleave", () => {
+                nav_link.style.background = "transparent";
+            });
+        })
+    } else {
+        navbar.style.background = "transparent";
+        navbar_collapse.style.background = "#000000";
+        nav_links.forEach(nav_link => {
+            nav_link.addEventListener("mouseenter", () => {
+                nav_link.style.background = "#2f2f2f";
+            });
+            nav_link.addEventListener("mouseleave", () => {
+                nav_link.style.background = "transparent";
+            });
+        })
+    }
+};
+// Nav bar Scribts End
+
+
+
 // The Entry Animation for Elements Start
 let sections_titles = document.querySelectorAll(".slide-up");
 let appearing_way = {

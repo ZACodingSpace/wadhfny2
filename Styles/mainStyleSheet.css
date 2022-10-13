@@ -148,11 +148,6 @@ body {
     cursor: pointer;
 }
 
-.navbar .container .navbar-collapse.show .navbar-nav .nav-item .nav-link:hover {
-
-    background-color: rgb(255, 255, 255, 0.2)
-}
-
 .navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link {
 
     display: flex;
@@ -218,7 +213,7 @@ body {
     background-color: var(--main-color);
     color: var(--page-background-color);
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .navbar .container .navbar-collapse .sign-up-btn:hover {
@@ -264,7 +259,7 @@ body {
     position: relative;
     direction: rtl;
     padding: 0;
-    background-color: #00AB67;
+    overflow: hidden;
 }
 
 .landing-section video {
@@ -282,7 +277,6 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgb(255, 255, 255, 0.7);
     background-color: rgb(0, 0, 0, 0.7);
 }
 
@@ -335,7 +329,7 @@ body {
     justify-content: center;
     align-items: center;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -366,6 +360,91 @@ body {
     background-color: var(--main-color);
     color: var(--page-background-color);
     border: transparent;
+}
+
+.landing-bacground {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    background-color: var(--main-color);
+}
+
+.landing-bacground::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 200px;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--shadow-color-1);
+    z-index: -1;
+}
+
+.landing-bacground::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 200px;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--icons-color);
+    z-index: -1;
+}
+
+.landing-jobs {
+
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.landing-jobs .job-name {
+    position: absolute;
+    border: 2px solid #ffffff1f;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #ffffff1a;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 20px 50px #0000001a;
+    color: #d7d7d7;
+    font-size: 90%;
+}
+
+.landing-jobs .job-name.a {
+
+    top: -100px;
+    left: -5px;
+}
+
+.landing-jobs .job-name.b {
+    top: -100px;
+    left: -200px;
+}
+
+.landing-jobs .job-name.c {
+    top: 30px;
+    left: -250px;
+}
+
+.landing-jobs .job-name.d {
+    top: -10px;
+    left: -100px;
+}
+
+.landing-jobs .job-name.e {
+    top: 80px;
+    left: -5px;
 }
 
 /********** Landing Section Styles End **********/
@@ -529,7 +608,8 @@ body {
     /* margin-bottom: 1rem; */
     /* background-color: yellow; */
 }
-.steps-section .section-container .step .step-num img{
+
+.steps-section .section-container .step .step-num img {
     height: 100px;
     width: 200px;
 }
@@ -589,7 +669,8 @@ body {
     width: 80px;
     height: 80px;
     z-index: -5;
-    border-radius: 5px;
+    border-radius: 50%;
+    ;
     background-color: #0A704411;
     transition: opacity 1s ease-in-out;
     animation: up-down 3s linear infinite;
@@ -603,7 +684,7 @@ body {
     right: 80%;
     width: 70px;
     height: 70px;
-    border-radius: 5px;
+    border-radius: 50%;
     background-color: #0A704411;
     transition: opacity 1s ease-in-out;
     animation: left-right 3s linear 1s infinite;
@@ -617,10 +698,10 @@ body {
     right: 30px;
     width: 40px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 50%;
     background-color: #0A704411;
     transition: opacity 1s ease-in-out;
-    animation: left-right 4s linear 1s infinite;
+    animation: left-right 4s linear 0.5s infinite;
     z-index: -5;
 }
 
@@ -628,6 +709,8 @@ body {
 
     50% {
         transform: translateY(-15px);
+        background-color: #ffffff1a;
+
     }
 
 }
@@ -636,6 +719,7 @@ body {
 
     50% {
         transform: translateX(-15px);
+        background-color: #ffffff1a;
     }
 
 }
