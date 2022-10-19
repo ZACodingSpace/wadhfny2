@@ -1,0 +1,24 @@
+<svg width="4500" height="2500" viewBox="0 0 4500 2500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Desktop - 1" clip-path="url(#clip0_59_7)">
+<rect width="4500" height="2500" fill="white"/>
+<g id="Frame 7" clip-path="url(#clip1_59_7)" filter="url(#filter0_f_59_7)">
+<rect width="4500" height="2500" fill="white"/>
+<circle id="Ellipse 88" cx="718" cy="1593" r="875" fill="#0A7044"/>
+<circle id="Ellipse 90" cx="2126" cy="1119" r="1000" fill="#BEC3CC"/>
+<circle id="Ellipse 89" cx="3795" cy="539" r="750" fill="#00AB67"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_59_7" x="-1750" y="-1750" width="8000" height="6000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="875" result="effect1_foregroundBlur_59_7"/>
+</filter>
+<clipPath id="clip0_59_7">
+<rect width="4500" height="2500" fill="white"/>
+</clipPath>
+<clipPath id="clip1_59_7">
+<rect width="4500" height="2500" fill="white"/>
+</clipPath>
+</defs>
+</svg>
